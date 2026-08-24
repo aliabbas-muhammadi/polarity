@@ -1,0 +1,235 @@
+{
+  "artifact_bundle_fingerprint": "pl1:0dfcb787d1b5ea811b7405606f8a1e1ae95d50802053c0227324d16cb3c33df1",
+  "calibration": {
+    "ece_calibrated": 0.087378,
+    "ece_raw": 0.067684,
+    "method": "isotonic"
+  },
+  "checkpoint_sha256": "8d765a7e55c94bb5a8c7754eb705ddf8dc7e6c74cc72e1b0ce4c9110e7a0f355",
+  "execution_fingerprint": "pl1:bc55b62acce7235c6442b53e2b3cf1147241619cac801899d7993db7ee289cec",
+  "experiment_id": "xp-006-deberta-transformers-fixed",
+  "fp_definition": "false_positive = gold NOT_CACHE_EQUIVALENT predicted CACHE_EQUIVALENT (score >= tau)",
+  "frozen_thresholds": {
+    "fpr_le_0.01": 0.994833,
+    "fpr_le_0.05": 0.035936,
+    "zero_fp": 0.9996990000000001
+  },
+  "model_fingerprint": "pl1:04857dd3f1522863cc9e99378569403ab76f72f5f64d7fc59abc98e38a125c17",
+  "n_equivalent": 31,
+  "n_not_equivalent": 44,
+  "n_pairs": 75,
+  "operating_points": {
+    "fpr_le_0.01": {
+      "realized": {
+        "by_pair_type": {
+          "different-answer-must-not-hit": {
+            "false_positives": 2,
+            "fp_rate": 0.090909,
+            "n": 22,
+            "n_negative": 22,
+            "n_positive": 0,
+            "recall": null
+          },
+          "exact-repeat": {
+            "false_positives": 0,
+            "fp_rate": null,
+            "n": 10,
+            "n_negative": 0,
+            "n_positive": 10,
+            "recall": 1.0
+          },
+          "negation-must-not-hit": {
+            "false_positives": 0,
+            "fp_rate": 0.0,
+            "n": 22,
+            "n_negative": 22,
+            "n_positive": 0,
+            "recall": null
+          },
+          "paraphrase-should-hit": {
+            "false_positives": 0,
+            "fp_rate": null,
+            "n": 21,
+            "n_negative": 0,
+            "n_positive": 21,
+            "recall": 1.0
+          }
+        },
+        "overall": {
+          "false_positives": 2,
+          "fn": 0,
+          "fp": 2,
+          "fpr": 0.045455,
+          "precision": 0.939394,
+          "recall": 1.0,
+          "tau": 0.994833,
+          "tn": 42,
+          "tp": 31
+        },
+        "split": "veritas"
+      },
+      "selection": {
+        "observed_selection": {
+          "fn": 74,
+          "fp": 8,
+          "fpr": 0.00927,
+          "recall": 0.90525,
+          "tn": 855,
+          "tp": 707
+        },
+        "selection_rule": "fpr_budget",
+        "selection_split": "validation",
+        "target_fpr": 0.01,
+        "threshold": 0.994833
+      }
+    },
+    "fpr_le_0.05": {
+      "realized": {
+        "by_pair_type": {
+          "different-answer-must-not-hit": {
+            "false_positives": 6,
+            "fp_rate": 0.272727,
+            "n": 22,
+            "n_negative": 22,
+            "n_positive": 0,
+            "recall": null
+          },
+          "exact-repeat": {
+            "false_positives": 0,
+            "fp_rate": null,
+            "n": 10,
+            "n_negative": 0,
+            "n_positive": 10,
+            "recall": 1.0
+          },
+          "negation-must-not-hit": {
+            "false_positives": 1,
+            "fp_rate": 0.045455,
+            "n": 22,
+            "n_negative": 22,
+            "n_positive": 0,
+            "recall": null
+          },
+          "paraphrase-should-hit": {
+            "false_positives": 0,
+            "fp_rate": null,
+            "n": 21,
+            "n_negative": 0,
+            "n_positive": 21,
+            "recall": 1.0
+          }
+        },
+        "overall": {
+          "false_positives": 7,
+          "fn": 0,
+          "fp": 7,
+          "fpr": 0.159091,
+          "precision": 0.815789,
+          "recall": 1.0,
+          "tau": 0.035936,
+          "tn": 37,
+          "tp": 31
+        },
+        "split": "veritas"
+      },
+      "selection": {
+        "observed_selection": {
+          "fn": 29,
+          "fp": 43,
+          "fpr": 0.049826,
+          "recall": 0.962868,
+          "tn": 820,
+          "tp": 752
+        },
+        "selection_rule": "fpr_budget",
+        "selection_split": "validation",
+        "target_fpr": 0.05,
+        "threshold": 0.035936
+      }
+    },
+    "zero_fp": {
+      "realized": {
+        "by_pair_type": {
+          "different-answer-must-not-hit": {
+            "false_positives": 0,
+            "fp_rate": 0.0,
+            "n": 22,
+            "n_negative": 22,
+            "n_positive": 0,
+            "recall": null
+          },
+          "exact-repeat": {
+            "false_positives": 0,
+            "fp_rate": null,
+            "n": 10,
+            "n_negative": 0,
+            "n_positive": 10,
+            "recall": 0.1
+          },
+          "negation-must-not-hit": {
+            "false_positives": 0,
+            "fp_rate": 0.0,
+            "n": 22,
+            "n_negative": 22,
+            "n_positive": 0,
+            "recall": null
+          },
+          "paraphrase-should-hit": {
+            "false_positives": 0,
+            "fp_rate": null,
+            "n": 21,
+            "n_negative": 0,
+            "n_positive": 21,
+            "recall": 1.0
+          }
+        },
+        "overall": {
+          "false_positives": 0,
+          "fn": 9,
+          "fp": 0,
+          "fpr": 0.0,
+          "precision": 1.0,
+          "recall": 0.709677,
+          "tau": 0.9996990000000001,
+          "tn": 44,
+          "tp": 22
+        },
+        "split": "veritas"
+      },
+      "selection": {
+        "observed_selection": {
+          "fn": 440,
+          "fp": 0,
+          "fpr": 0.0,
+          "recall": 0.43662,
+          "tn": 863,
+          "tp": 341
+        },
+        "selection_rule": "zero_observed_fp",
+        "selection_split": "validation",
+        "target_fpr": null,
+        "threshold": 0.9996990000000001
+      }
+    }
+  },
+  "protocol_version": 2,
+  "recipe_fingerprint": "pl1:04857dd3f1522863cc9e99378569403ab76f72f5f64d7fc59abc98e38a125c17",
+  "threshold_free": {
+    "recall_at_fpr_le_0.01": {
+      "metric": "threshold-free recall at actual dataset FPR <= 0.01",
+      "overall": {
+        "false_positives": 0,
+        "fn": 7,
+        "fp": 0,
+        "fpr": 0.0,
+        "precision": 1.0,
+        "recall": 0.774194,
+        "tau": 0.999522,
+        "tn": 44,
+        "tp": 24
+      },
+      "split": "veritas",
+      "target_fpr": 0.01
+    }
+  }
+}

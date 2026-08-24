@@ -1,0 +1,159 @@
+{
+  "entries": [
+    {
+      "group": "api-deprecation",
+      "pair_id": "syn-api-deprecated",
+      "pair_sha": "pl1:77cff98e1edf9df603648bbde86219d7624a7c924a5cd04aa5fd184708048082",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "binary-search-complexity",
+      "pair_id": "syn-binsearch",
+      "pair_sha": "pl1:b46fb0a0c1030452b57d800ef5954a81492464416b4825df1578f213d323bccc",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "build-status",
+      "pair_id": "syn-build-status",
+      "pair_sha": "pl1:d2fa2850a1693ffa51042f2c21c6e8202635d7a229f754873119b191c2ea500c",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "css-center",
+      "pair_id": "syn-center-div",
+      "pair_sha": "pl1:e0587c1d2d9a78abbe1835acfeb3e2fe1d1011a817f650ddfab25091434cba8f",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "css-center",
+      "pair_id": "syn-center-div-2",
+      "pair_sha": "pl1:fe2fe95ae0d1b0fc4776e6fa91350fcf53717661fa362d3e5ccf328baab648a8",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "dependency-direction",
+      "pair_id": "syn-depends",
+      "pair_sha": "pl1:97638eb1744d0d3ae35d6a0246e893c4fa9007c26af6561bc45a1763cca595af",
+      "source": "synthetic",
+      "split": "test"
+    },
+    {
+      "group": "docker-what",
+      "pair_id": "syn-docker-exact",
+      "pair_sha": "pl1:b2f8aeae6ea0a84fba0a49f3764cf1c11281df3bb171ba84db863d7823e2bae3",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "dosage-population",
+      "pair_id": "syn-dosage",
+      "pair_sha": "pl1:83c2a51daf66e15e77ffcd7e5fe54eda9bacce165e3572d4b28ed9fa7dc42bbd",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "dune-author",
+      "pair_id": "syn-dune-author",
+      "pair_sha": "pl1:7092840d9db24c22db70abf9c11725f6604f622ec80a8ec97897485be11ab536",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "connection-encryption",
+      "pair_id": "syn-encrypted",
+      "pair_sha": "pl1:c0167aaf139bb24b1504e3b51f92cb274e31a4b5ff14a5602f6e2bf6e893c047",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "endpoint-security",
+      "pair_id": "syn-endpoint-insecure",
+      "pair_sha": "pl1:026922d8421ce1bbc9d993985c73fe9351b202bbb27730849956d7426064f490",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "graphql-what",
+      "pair_id": "syn-graphql-exact",
+      "pair_sha": "pl1:b2ba00c4e191a832c4da476a3e720403a799d352442399305bb8e2cb974a3db0",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "holiday-month",
+      "pair_id": "syn-holidays",
+      "pair_sha": "pl1:6e685c42d1afceea1e4ed794b6eec87a1a585fe4ee85a3e86fba62de8dcccae7",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "lounge-access",
+      "pair_id": "syn-lounge-not-allowed",
+      "pair_sha": "pl1:4e8c0ae364a2f17adadfdfd78392e0a4de5b9abfbccea025f48138298a8c05f3",
+      "source": "synthetic",
+      "split": "validation"
+    },
+    {
+      "group": "mammals-eggs",
+      "pair_id": "syn-mammals",
+      "pair_sha": "pl1:8ef0918495e468271a79e1b7c1a74a4609e6d65fc8a175a94b48ee384a9d5f2f",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "build-fail-frequency",
+      "pair_id": "syn-not-uncommon",
+      "pair_sha": "pl1:3b43bbde8b6b27f9ff9880c73bfb7f5af3570f7c2d3c758373b212ff4db32bc1",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "percent-of",
+      "pair_id": "syn-percent",
+      "pair_sha": "pl1:d67745d10bbf9612aae88df04e1b0c6e6fc06997eec5b55961fdea7ac1e54a0f",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "country-population",
+      "pair_id": "syn-population",
+      "pair_sha": "pl1:8b5555f8ce52df1621d31fe78a474f65bcff1920450fcdc3e04d1591e79e83c3",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "return-item",
+      "pair_id": "syn-return",
+      "pair_sha": "pl1:ad3c43872e1708ea8115e773721e117fe82d18b4d7d1ffb587cd9f8d814c0e0d",
+      "source": "synthetic",
+      "split": "test"
+    },
+    {
+      "group": "rust-borrow",
+      "pair_id": "syn-rust-borrow",
+      "pair_sha": "pl1:998a51fc18c3705154ce099c5f2e0064493258e3023cda3bdf2e67d333d7b67b",
+      "source": "synthetic",
+      "split": "train"
+    },
+    {
+      "group": "ssl-validity",
+      "pair_id": "syn-ssl-valid",
+      "pair_sha": "pl1:b53ec06551613da7b93b878486a91616d798caab29798689204c16fa3ec61272",
+      "source": "synthetic",
+      "split": "train"
+    }
+  ],
+  "manifest_version": "polarity-split-1",
+  "n": 21,
+  "ratios": {
+    "test": 0.15,
+    "train": 0.7,
+    "validation": 0.15
+  },
+  "seed": 42
+}

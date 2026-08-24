@@ -1,0 +1,53 @@
+Polarity
+Copyright (c) 2026 Ali Muhammadi
+
+Polarity's own code and documentation are released under the MIT License in
+LICENSE. That license does not relicense any third-party dataset, model,
+tokenizer, paper, or the private fine-tuned checkpoint.
+
+Tracked manifests, prediction rows, reports, author-created evaluation data,
+and excluded model/data artifacts have different provenance and release
+boundaries. The artifact-scope table in ATTRIBUTIONS.md is authoritative for
+this source-only release; the top-level MIT license is not a blanket license
+for third-party-derived artifacts.
+
+This repository is prepared for a source-only release. It does not distribute
+the fine-tuned model/tokenizer bundle, raw third-party corpora, ignored run
+directories, or the complete MRPC gold-label vector. The committed MRPC
+prediction artifact contains stable row identities and scores only.
+
+Third-party notices:
+
+- microsoft/deberta-v3-base is the base model and tokenizer, pinned at revision
+  8ccc9b6f36199bec6961081d44eb72fb3f7353f3. Microsoft's model card marks the
+  base model MIT, and the Microsoft DeBERTa repository carries an MIT license.
+  Preserve Microsoft's notice when using the base model. This does not assign
+  an MIT license to Polarity's private fine-tuned checkpoint.
+
+- PAWS-Wiki is published by Google Research under the PAWS dataset notice and
+  is derived from Wikipedia text. Applicable Google notice and Wikipedia
+  attribution/share-alike obligations remain with that material.
+
+- CANNOT's repository and dataset card declare CC BY-SA 4.0. CANNOT compiles
+  NaN-NLI, GLUE Diagnostic, WikiFactCheck-English, Sentiment Labelled
+  Sentences, and SemAntoNeg/antonym-substitution sources. Polarity has not
+  resolved every upstream right in that chain for unrestricted checkpoint
+  redistribution, and this audit identified no explicit redistribution grant
+  for GLUE Diagnostic itself. No checkpoint-redistribution permission is
+  asserted from that chain.
+
+- Microsoft Research Paraphrase Corpus (MRPC) was used for external aggregate
+  evaluation. Microsoft's official installer includes a non-commercial shared-
+  source redistribution grant under stated conditions and prohibits commercial
+  use/distribution; no commercial redistribution grant was identified. GLUE's
+  downloader separately states that it cannot host MRPC for legal reasons.
+  Obtain MRPC independently; this repository does not distribute its text.
+
+- The author-created Veritas transfer snapshot under
+  data/snapshots/veritas-golden/ is governed by its committed PROVENANCE.json.
+  No embeddings or model-guard outputs are included in that snapshot.
+
+See ATTRIBUTIONS.md and docs/DATA.md for links and fuller provenance. The
+source-only posture is conservative and is not legal advice. The fine-tuned
+checkpoint remains unavailable pending written clarification, legal review, or
+a provenance-clean retraining effort.

@@ -1,0 +1,33 @@
+{
+  "cannot": {
+    "accepted": 77376,
+    "rejected": 0,
+    "rejections": {},
+    "source": "cannot",
+    "source_rows": 77376
+  },
+  "mnli": {
+    "accepted": 137356,
+    "rejected": 274993,
+    "rejections": {
+      "entailment_directional_unsuitable": 137841,
+      "neutral_ambiguous": 137152
+    },
+    "source": "mnli",
+    "source_rows": 412349
+  },
+  "nan-nli": {
+    "accepted": 258,
+    "rejected": 0,
+    "rejections": {},
+    "source": "nan-nli",
+    "source_rows": 258
+  },
+  "paws-wiki": {
+    "accepted": 65401,
+    "rejected": 0,
+    "rejections": {},
+    "source": "paws-wiki",
+    "source_rows": 65401
+  }
+}

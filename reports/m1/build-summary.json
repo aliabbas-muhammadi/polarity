@@ -1,0 +1,21 @@
+{
+  "disposition_primary": "TRAINING_RECIPE_READY",
+  "equivalent_negation_sufficient": true,
+  "excluded_examples": 17,
+  "excluded_families": 13,
+  "limit_per_source": 8000,
+  "mnli_verdict": "EXCLUDE",
+  "n_eval_probe": 258,
+  "n_primary": 15983,
+  "n_with_mnli": 23983,
+  "nan_probe_collisions": 17,
+  "remediation": "excluded_colliding_families",
+  "sealed_veritas_collisions": 0,
+  "seed": 42,
+  "split_ratios": {
+    "test": 0.1,
+    "train": 0.8,
+    "validation": 0.1
+  },
+  "status": "OK"
+}

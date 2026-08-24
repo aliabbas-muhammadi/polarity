@@ -1,0 +1,84 @@
+# M3.1 — the corrected experiment. Frozen pre-registration (docs/M3-REPORT.md "Proposed M3.1").
+# IDENTICAL to configs/train/m3-deberta-v3-base.yaml EXCEPT the selection + stopping objective:
+#   * selection.metric: pauc  (was recall_at_fpr, which floored at 0 on the small val negative set)
+#   * early_stopping_patience: 99  (effectively run the full 4 epochs; no patience on a floored metric)
+# New experiment_id -> distinct fingerprint, predictions/m3/<id>/, reports/m3/*-<id>.json. Same
+# model/data/seed/loss/hyperparameters, so the comparison to M3 (xp-003) is clean.
+
+experiment_id: xp-004-deberta-pauc-select
+
+model:
+  hf_id: microsoft/deberta-v3-base
+  revision: 8ccc9b6f36199bec6961081d44eb72fb3f7353f3
+  tokenizer_revision: 8ccc9b6f36199bec6961081d44eb72fb3f7353f3
+  license: MIT
+  params: "184M (86M backbone + 98M embedding; 12L/768H; vocab 128100)"
+  num_labels: 2
+  trust_remote_code: false
+
+data:
+  recipe: primary-capped-A
+  train_manifest: manifests/primary/train.jsonl
+  validation_manifest: manifests/primary/validation.jsonl
+  internal_test_manifest: manifests/primary/internal_test.jsonl
+  approved_sha256:
+    train: 656625d6ae3f445c77bfbfdf6b72e887c4785ab674d5ecce7dea4f769959bd95
+    validation: 6b31c1028af3b9e9b0113ac02468f4e040366addde828802ae93b344d47118c5
+    internal_test: 2f674ccb2f49516bd467d14d9f2ca90a24a8737d7c55fa6a867458db6d6bba88
+  allowed_sources: [cannot, paws-wiki]
+
+training:
+  objective: binary_cross_entropy
+  max_length: 128
+  truncation: longest_first
+  batch_size: 16
+  gradient_accumulation: 2
+  learning_rate: 2.0e-5
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_eps: 1.0e-6
+  weight_decay: 0.01
+  warmup_ratio: 0.06
+  scheduler: linear
+  epochs: 4
+  max_steps: null
+  grad_clip: 1.0
+  precision: bf16
+  seed: 42
+  eval_every_steps: 100
+  early_stopping_patience: 99   # M3.1: no early-stop on the floored metric — run the full 4 epochs
+  class_weights: false
+
+selection:
+  metric: pauc                  # M3.1: robust to the thin FPR<=1% operating point (was recall_at_fpr)
+  fpr_budget: 0.01              # reporting operating point unchanged (same success bar as M3)
+  tie_break: earliest_step
+  pauc_fpr_max: 0.02
+  split: validation
+
+calibration:
+  candidates: [identity, temperature, platt, isotonic]
+  fit_split: validation
+  isotonic_min_obs: 200
+
+success:
+  rule: paired_uncertainty
+  nli_baseline_recall: 0.073  # validation-selected tau; test FP=16/883 (1.81%)
+  nli_baseline_recall_ci: [0.055, 0.094]
+  nli_baseline_eqn_recall: 0.052
+  nli_baseline_eqn_n: 58
+  secondary_eqn_margin: 0.05
+  guardrail_expl_fp_margin: 0.05
+  bootstrap_n: 2000
+  bootstrap_seed: 12345
+
+cost:
+  max_runtime_hours: 1.0
+  max_estimated_cost_aud: 15.0
+  planning_hourly_rate_aud: 1.05
+
+env:
+  python: ">=3.12"
+  transformers: ">=4.40"
+  torch: ">=2"
+  hardware_class: "single 24GB GPU (RTX 4090 / L4)"

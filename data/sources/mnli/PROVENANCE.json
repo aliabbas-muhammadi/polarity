@@ -1,0 +1,18 @@
+{
+  "attribution": "MultiNLI (Williams, Nangia, Bowman, NAACL 2018). Multi-license; attribution + share-alike on CC-BY-SA-derived text.",
+  "files": {
+    "dev_matched.jsonl": "1ee839f5f75c6aa1c0f10c92b2f900da6f3792d57319d238694d97d363b472ad",
+    "dev_mismatched.jsonl": "281d7bab4273572963c1a0350ff8dd1e714b1a512adbd9843e171f4e6a70b952",
+    "train.jsonl": "55b90b3f9399caff54900e50049cc9bb5f40a28375d463a528169ca6207d35ba"
+  },
+  "format": "jsonl",
+  "homepage": "https://huggingface.co/datasets/nyu-mll/multi_nli",
+  "id": "mnli",
+  "license": "OANC + CC-BY-3.0 / CC-BY-SA-3.0 / US-public-domain (multi-license)",
+  "license_status": "USABLE_WITH_CONDITIONS",
+  "license_url": "https://huggingface.co/datasets/nyu-mll/multi_nli",
+  "name": "MultiNLI (MNLI)",
+  "retrieved": "2026-08-20",
+  "revision": "da70db2af9d09693783c3320c4249840212ee221",
+  "tier": "exploratory_mnli"
+}

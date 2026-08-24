@@ -1,0 +1,21 @@
+# Evaluation contract. DOCUMENTATION ONLY in M0 (the metrics code lives in src/polarity/eval).
+# Primary operational question: recall at a low, FIXED false-positive budget.
+# positive = CACHE_EQUIVALENT.
+# false_positive = NOT_CACHE_EQUIVALENT predicted CACHE_EQUIVALENT (score >= tau).
+
+primary_metric: recall_at_fixed_fpr
+operating_points:
+  - recall_at_0_observed_fp        # reported as "0 observed FP on N negatives" (finite-sample)
+  - recall_at_fpr_le_0.01          # only where N supports the FPR resolution
+report_also:
+  - precision_recall_curve
+  - confusion_matrix
+  - per_category_error_rates       # no aggregate may hide a per-category failure
+  - calibration: [ece, brier, reliability_curve]
+  - statistics: [paired_bootstrap_ci, mcnemar]
+baselines:
+  - frozen_cosine_single_threshold
+  - vcache_style_per_prompt_threshold   # STRONG baseline to beat (arXiv:2502.03771)
+  - offtheshelf_nli_cross_encoder
+  - historical_llm_judge                # provenance-labeled; not re-run in early milestones
+selection_rule: threshold + calibration chosen on VALIDATION only; sealed holdout evaluated once

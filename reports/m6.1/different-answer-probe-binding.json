@@ -1,0 +1,33 @@
+{
+  "artifact_identity": {
+    "artifact_bundle_fingerprint": "pl1:0dfcb787d1b5ea811b7405606f8a1e1ae95d50802053c0227324d16cb3c33df1",
+    "checkpoint_sha256": "8d765a7e55c94bb5a8c7754eb705ddf8dc7e6c74cc72e1b0ce4c9110e7a0f355",
+    "execution_fingerprint": "pl1:bc55b62acce7235c6442b53e2b3cf1147241619cac801899d7993db7ee289cec",
+    "recipe_fingerprint": "pl1:04857dd3f1522863cc9e99378569403ab76f72f5f64d7fc59abc98e38a125c17"
+  },
+  "evaluation_id": "m6.1-different-answer-probe",
+  "model_manifest": {
+    "path": "reports/m6/model-manifest-xp-006-deberta-transformers-fixed.json",
+    "sha256": "ca197863619c436c02eed1272fd839bc16fc944c416001a257e2271a28612a02"
+  },
+  "predictions": {
+    "path": "predictions/m6.1/different-answer-probe.jsonl",
+    "rows": 44,
+    "sha256": "f966c8f3796f46a3ffd85bf5aa12076d4a9c5def9379b056196351db1d562171"
+  },
+  "protocol": {
+    "path": "reports/m6/protocol-xp-006-deberta-transformers-fixed.json",
+    "protocol_version": 2,
+    "sha256": "420f6e177bed7a5f1acc71856d6792e982d74354f54dc913db81a4fecc249912"
+  },
+  "report": {
+    "path": "reports/m6.1/different-answer-probe.json",
+    "sha256": "420e453ed4ce8b95e2c3fd32807e7cf9a5f5f5e899c772bde7da164010967a41"
+  },
+  "schema_version": "polarity-evaluation-binding-1",
+  "source": {
+    "identifier": "data/diagnostics/different-answer-probe.json",
+    "rows": 44,
+    "sha256": "a1a3603af9efaeb3d1e082f2e2979afe1b374272b41113e135f0badcdd2a2d4c"
+  }
+}

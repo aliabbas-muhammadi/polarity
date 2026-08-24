@@ -1,0 +1,166 @@
+{
+  "best_f1": {
+    "f1": 0.75,
+    "fn": 0,
+    "fp": 4,
+    "fpr": 0.666667,
+    "precision": 0.6,
+    "recall": 1.0,
+    "tau": 0.34,
+    "tn": 2,
+    "tp": 6
+  },
+  "fp_definition": "false_positive = gold NOT_CACHE_EQUIVALENT predicted CACHE_EQUIVALENT (score >= tau)",
+  "fpr_resolution_note": "6 negatives => FPR granularity 1/6 = 0.166667; sub-granularity FPR points are not resolvable. Report '0 observed FP on N negatives', not a population 0% FPR.",
+  "n": 12,
+  "n_negative": 6,
+  "n_positive": 6,
+  "per_category": [
+    {
+      "category": "entity_change",
+      "error_rate": 0.0,
+      "errors": 0,
+      "n": 1
+    },
+    {
+      "category": "equivalent_negation",
+      "error_rate": 0.5,
+      "errors": 1,
+      "n": 2
+    },
+    {
+      "category": "exact_repeat",
+      "error_rate": 0.0,
+      "errors": 0,
+      "n": 1
+    },
+    {
+      "category": "explicit_negation",
+      "error_rate": 1.0,
+      "errors": 1,
+      "n": 1
+    },
+    {
+      "category": "hard_paraphrase",
+      "error_rate": 0.0,
+      "errors": 0,
+      "n": 1
+    },
+    {
+      "category": "lexical_contradiction",
+      "error_rate": 1.0,
+      "errors": 1,
+      "n": 1
+    },
+    {
+      "category": "numeric_change",
+      "error_rate": 0.0,
+      "errors": 0,
+      "n": 1
+    },
+    {
+      "category": "paraphrase",
+      "error_rate": 0.0,
+      "errors": 0,
+      "n": 2
+    },
+    {
+      "category": "scope_change",
+      "error_rate": 1.0,
+      "errors": 1,
+      "n": 1
+    },
+    {
+      "category": "temporal_change",
+      "error_rate": 0.0,
+      "errors": 0,
+      "n": 1
+    }
+  ],
+  "positive_class": "CACHE_EQUIVALENT",
+  "recall_at_zero_fp": {
+    "fp": 0,
+    "max_negative_score": 0.93,
+    "n_negatives": 6,
+    "name": "recall_at_0_observed_fp",
+    "note": "threshold must exceed top negative (0.93); 2/6 positives clear it",
+    "recall": 0.333333
+  },
+  "recall_ci": {
+    "ci_high": 1.0,
+    "ci_low": 0.5,
+    "n_boot": 1000,
+    "recall": 0.833333,
+    "seed": 42,
+    "tau": 0.5
+  },
+  "schema_version": "polarity-metrics-1",
+  "threshold_table": [
+    {
+      "f1": 0.714286,
+      "fn": 1,
+      "fp": 3,
+      "fpr": 0.5,
+      "precision": 0.625,
+      "recall": 0.833333,
+      "tau": 0.5,
+      "tn": 3,
+      "tp": 5
+    },
+    {
+      "f1": 0.615385,
+      "fn": 2,
+      "fp": 3,
+      "fpr": 0.5,
+      "precision": 0.571429,
+      "recall": 0.666667,
+      "tau": 0.6,
+      "tn": 3,
+      "tp": 4
+    },
+    {
+      "f1": 0.666667,
+      "fn": 2,
+      "fp": 2,
+      "fpr": 0.333333,
+      "precision": 0.666667,
+      "recall": 0.666667,
+      "tau": 0.7,
+      "tn": 4,
+      "tp": 4
+    },
+    {
+      "f1": 0.545455,
+      "fn": 3,
+      "fp": 2,
+      "fpr": 0.333333,
+      "precision": 0.6,
+      "recall": 0.5,
+      "tau": 0.8,
+      "tn": 4,
+      "tp": 3
+    },
+    {
+      "f1": 0.6,
+      "fn": 3,
+      "fp": 1,
+      "fpr": 0.166667,
+      "precision": 0.75,
+      "recall": 0.5,
+      "tau": 0.9,
+      "tn": 5,
+      "tp": 3
+    },
+    {
+      "f1": 0.5,
+      "fn": 4,
+      "fp": 0,
+      "fpr": 0.0,
+      "precision": 1.0,
+      "recall": 0.333333,
+      "tau": 0.95,
+      "tn": 6,
+      "tp": 2
+    }
+  ]
+}

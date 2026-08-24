@@ -1,0 +1,12 @@
+{"pair_id": "pred-p1", "gold": "CACHE_EQUIVALENT", "score": 0.98, "category": "exact_repeat", "source": "synthetic-eval"}
+{"pair_id": "pred-p2", "gold": "CACHE_EQUIVALENT", "score": 0.95, "category": "paraphrase", "source": "synthetic-eval"}
+{"pair_id": "pred-p3", "gold": "CACHE_EQUIVALENT", "score": 0.91, "category": "paraphrase", "source": "synthetic-eval"}
+{"pair_id": "pred-p4", "gold": "CACHE_EQUIVALENT", "score": 0.72, "category": "hard_paraphrase", "source": "synthetic-eval"}
+{"pair_id": "pred-p5", "gold": "CACHE_EQUIVALENT", "score": 0.55, "category": "equivalent_negation", "source": "synthetic-eval"}
+{"pair_id": "pred-p6", "gold": "CACHE_EQUIVALENT", "score": 0.34, "category": "equivalent_negation", "source": "synthetic-eval"}
+{"pair_id": "pred-n1", "gold": "NOT_CACHE_EQUIVALENT", "score": 0.10, "category": "entity_change", "source": "synthetic-eval"}
+{"pair_id": "pred-n2", "gold": "NOT_CACHE_EQUIVALENT", "score": 0.22, "category": "numeric_change", "source": "synthetic-eval"}
+{"pair_id": "pred-n3", "gold": "NOT_CACHE_EQUIVALENT", "score": 0.48, "category": "temporal_change", "source": "synthetic-eval"}
+{"pair_id": "pred-n4", "gold": "NOT_CACHE_EQUIVALENT", "score": 0.60, "category": "scope_change", "source": "synthetic-eval"}
+{"pair_id": "pred-n5", "gold": "NOT_CACHE_EQUIVALENT", "score": 0.88, "category": "explicit_negation", "source": "synthetic-eval"}
+{"pair_id": "pred-n6", "gold": "NOT_CACHE_EQUIVALENT", "score": 0.93, "category": "lexical_contradiction", "source": "synthetic-eval"}

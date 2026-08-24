@@ -1,0 +1,134 @@
+{
+  "NOTE": "Author-run GPU telemetry (not keyless/drift-gated, like predictions). The keyless collapse verdict + metrics recompute from committed predictions via `train report`.",
+  "collapse": {
+    "final_collapsed_streak": 4,
+    "selected_checkpoint": {
+      "collapsed": true,
+      "reasons": [
+        "score std 4.90e-05 < 1.00e-03",
+        "class separation 1.00e-06 < 1.00e-03"
+      ]
+    },
+    "thresholds": {
+      "min_class_separation": 0.001,
+      "min_score_std": 0.001,
+      "min_unique_scores": 2,
+      "patience_evals": 3,
+      "warmup_evals": 3
+    }
+  },
+  "cost": {
+    "authorized_cap_aud": 1.0,
+    "bad_draw_pod_minutes": 5,
+    "est_incremental_aud": 0.37,
+    "observed_pod_minutes": 14.5,
+    "rate_usd_per_hr": 0.74
+  },
+  "experiment_id": "xp-005-deberta-fp32",
+  "hardware": {
+    "container_image": "runpod/pytorch:2.2.0-py3.10-cuda12.1.1-devel-ubuntu22.04",
+    "data_center": "US-NC-1",
+    "device": "cuda",
+    "driver": "550.127.05",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "provider": "RunPod SECURE",
+    "torch": "2.6.0+cu124",
+    "vram_gb": 24
+  },
+  "max_grad_norm": 8.8672,
+  "n_train": 12731,
+  "n_val": 1644,
+  "nonfinite_encountered": false,
+  "params": 184423682,
+  "per_eval_telemetry": [
+    {
+      "collapsed": true,
+      "epoch": 0,
+      "grad_norm": 6.2695,
+      "lr": 1.993e-05,
+      "train_loss": 0.713797,
+      "update": 100,
+      "val_class_sep": 1e-06,
+      "val_fpr": 0.0,
+      "val_n_unique": 2,
+      "val_pauc": 0.0,
+      "val_recall": 0.0,
+      "val_score_std": 4.9e-05,
+      "val_tau": 1.0,
+      "wall_s": 14.3
+    },
+    {
+      "collapsed": true,
+      "epoch": 0,
+      "grad_norm": 1.0342,
+      "lr": 1.86e-05,
+      "train_loss": 0.705458,
+      "update": 200,
+      "val_class_sep": 0.0,
+      "val_fpr": 0.0,
+      "val_n_unique": 1,
+      "val_pauc": 0.0,
+      "val_recall": 0.0,
+      "val_score_std": 0.0,
+      "val_tau": 1.0,
+      "wall_s": 27.3
+    },
+    {
+      "collapsed": true,
+      "epoch": 0,
+      "grad_norm": 0.3474,
+      "lr": 1.726e-05,
+      "train_loss": 0.694051,
+      "update": 300,
+      "val_class_sep": 0.0,
+      "val_fpr": 0.0,
+      "val_n_unique": 1,
+      "val_pauc": 0.0,
+      "val_recall": 0.0,
+      "val_score_std": 0.0,
+      "val_tau": 1.0,
+      "wall_s": 41.17
+    },
+    {
+      "collapsed": true,
+      "epoch": 1,
+      "grad_norm": 0.8086,
+      "lr": 1.593e-05,
+      "train_loss": 0.680062,
+      "update": 400,
+      "val_class_sep": 0.0,
+      "val_fpr": 0.0,
+      "val_n_unique": 2,
+      "val_pauc": 0.0,
+      "val_recall": 0.0,
+      "val_score_std": 0.000121,
+      "val_tau": 1.0,
+      "wall_s": 54.14
+    }
+  ],
+  "precision_requested": "fp32",
+  "precision_used": "fp32",
+  "selected_checkpoint": {
+    "epoch": 0,
+    "satisfies_budget": true,
+    "step": 100,
+    "val_class_separation": 1e-06,
+    "val_fpr_at_budget": 0.0,
+    "val_has_nonfinite": false,
+    "val_loss": 0.713797,
+    "val_n_scored": 1644,
+    "val_n_unique": 2,
+    "val_pauc": 0.0,
+    "val_recall_at_budget": 0.0,
+    "val_score_max": 0.243408,
+    "val_score_mean_neg": 0.243383,
+    "val_score_mean_pos": 0.243385,
+    "val_score_min": 0.243286,
+    "val_score_std": 4.9e-05,
+    "val_tau": 1.0
+  },
+  "stop_reason": "sustained collapse: 4 consecutive collapsed checkpoints (score std 1.21e-04 < 1.00e-03, class separation 0.00e+00 < 1.00e-03)",
+  "total_updates_planned": 1592,
+  "updates_run": 400,
+  "wall_seconds_training": 54.87
+}

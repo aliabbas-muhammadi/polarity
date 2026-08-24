@@ -1,0 +1,8 @@
+{
+  "best_threshold_family_recall": 0.042759,
+  "nli_equivalent_negation_recall": 0.051724,
+  "nli_recall": 0.073103,
+  "note": "signals only; the report states the final disposition with rationale",
+  "operating_point": "threshold selected on validation to target FPR<=1%",
+  "suggested_disposition": "CUSTOM_TRAINING_JUSTIFIED"
+}

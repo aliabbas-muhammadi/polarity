@@ -1,0 +1,81 @@
+{
+  "categories": [
+    {
+      "category": "exact_repeat",
+      "n": 41
+    },
+    {
+      "category": "paraphrase",
+      "n": 6239
+    },
+    {
+      "category": "hard_paraphrase",
+      "n": 352
+    },
+    {
+      "category": "equivalent_negation",
+      "n": 705
+    },
+    {
+      "category": "explicit_negation",
+      "n": 1205
+    },
+    {
+      "category": "lexical_contradiction",
+      "n": 149
+    },
+    {
+      "category": "numeric_change",
+      "n": 44
+    },
+    {
+      "category": "quantifier_change",
+      "n": 198
+    },
+    {
+      "category": "scope_change",
+      "n": 13
+    },
+    {
+      "category": "unknown",
+      "n": 7037
+    }
+  ],
+  "char_len_p50": 173,
+  "char_len_p95": 310,
+  "equivalent_negation_count": 705,
+  "equivalent_negation_sufficient": true,
+  "family_size_max": 14,
+  "family_size_p50": 1,
+  "family_size_p95": 2,
+  "frac_equivalent_with_negation_cue": 0.093788,
+  "frac_not_with_negation_cue": 0.177408,
+  "label_equivalent": 7325,
+  "label_not_equivalent": 8658,
+  "label_unlabeled": 0,
+  "n_examples": 15983,
+  "n_families": 12871,
+  "per_source": [
+    {
+      "equivalent": 3819,
+      "not_equivalent": 4164,
+      "p_not_given_source": 0.521608,
+      "source": "cannot",
+      "total": 7983,
+      "unlabeled": 0
+    },
+    {
+      "equivalent": 3506,
+      "not_equivalent": 4494,
+      "p_not_given_source": 0.56175,
+      "source": "paws-wiki",
+      "total": 8000,
+      "unlabeled": 0
+    }
+  ],
+  "recipe": "primary",
+  "shortcut_flags": [],
+  "source_majority_accuracy": 0.541701,
+  "token_len_p50": 30,
+  "token_len_p95": 57
+}

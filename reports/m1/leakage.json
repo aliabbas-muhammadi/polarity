@@ -1,0 +1,20 @@
+{
+  "excluded_families": 13,
+  "nan_nli_collisions": 17,
+  "note": "CANNOT incorporates a NaN-NLI subset, so some CANNOT training examples overlap the NaN-NLI eval probe; their families are excluded to keep the probe held out. Zero collisions with the sealed Veritas final holdout.",
+  "remediation": "excluded_colliding_families",
+  "sample_collisions": [
+    "cannot:all:19109",
+    "cannot:all:24956",
+    "cannot:all:27010",
+    "cannot:all:28037",
+    "cannot:all:30411",
+    "cannot:all:30636",
+    "cannot:all:35037",
+    "cannot:all:36556",
+    "cannot:all:48988",
+    "cannot:all:51390"
+  ],
+  "total_colliding_examples": 17,
+  "veritas_collisions": 0
+}

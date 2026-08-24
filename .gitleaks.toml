@@ -1,0 +1,21 @@
+title = "Polarity release Gitleaks configuration"
+minVersion = "v8.25.0"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Public DeBERTa tokenizer revision misclassified as a generic API key"
+targetRules = ["generic-api-key"]
+condition = "AND"
+regexTarget = "line"
+regexes = [
+  '''^\s*"?tokenizer_revision"?\s*:\s*"?8ccc9b6f36199bec6961081d44eb72fb3f7353f3"?\s*,?\s*$''',
+]
+paths = [
+  '''^configs/train/m3-1-deberta-v3-base\.yaml$''',
+  '''^configs/train/m3-2-deberta-fp32\.yaml$''',
+  '''^configs/train/m3-3-deberta-fixed\.yaml$''',
+  '''^configs/train/m3-deberta-v3-base\.yaml$''',
+  '''^reports/m6/model-manifest-xp-006-deberta-transformers-fixed\.json$''',
+]

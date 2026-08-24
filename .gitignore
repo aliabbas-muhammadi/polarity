@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+
+# Tooling caches
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Local env / secrets — never commit
+.env
+.env.*
+!.env.example
+
+# ML run outputs (regenerable; committed artifacts live in reports/ and predictions/)
+runs/
+*.local.json
+
+# Raw third-party corpora — fetched at pinned revisions, never committed (see docs/DATA.md).
+# Provenance (data/sources/), manifests/, and reports/ ARE committed.
+data/raw/
+
+# Model weights are never committed (see docs/THREAT-MODEL.md)
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Persisted model checkpoints (large; manifest committed under reports/m6)
+artifacts/
+
+# Local graph analysis output; keep existing artifacts in place but never publish them.
+graphify-out/

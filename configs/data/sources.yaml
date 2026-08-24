@@ -1,0 +1,35 @@
+# Planned data sources for M1. DOCUMENTATION ONLY — M0 downloads nothing.
+# `license_status` gates inclusion: any LICENSE_UNRESOLVED source is EXCLUDED from M1 until a
+# written grant is obtained. See docs/DATA.md for the full matrix, conditions, and citations.
+# (Accessibility is not permission.)
+
+sources:
+  - name: paws-wiki
+    role: positives + hard_negatives (word-order; NOT negation)
+    license: Google permissive notice + underlying Wikipedia CC-BY-SA-3.0
+    license_status: USABLE_WITH_CONDITIONS   # attribution + share-alike on committed text
+  - name: mnli
+    role: backbone/NLI pretraining; re-labeled via documented mapping, NOT raw cache labels
+    license: OANC + CC-BY-3.0 / CC-BY-SA-3.0 / US-public-domain
+    license_status: USABLE_WITH_CONDITIONS   # attribution + share-alike on FICTION-derived text
+  - name: cannot
+    role: negation slice (train) — best fit for the differentiator
+    license: CC-BY-SA-4.0
+    license_status: USABLE_WITH_CONDITIONS   # attribution + share-alike; verify no NC component
+  - name: nan-nli
+    role: negation-scope probe (EVAL only; too small to train on)
+    license: CC-BY-SA-4.0 (author HF card; GitHub repo has no LICENSE)
+    license_status: USABLE_WITH_CONDITIONS   # single-source license; re-check before release
+  - name: anli
+    role: hard adversarial NLI pairs (research milestones only)
+    license: CC-BY-NC-4.0
+    # Conservative project rule; makes no claim about learned-parameter license inheritance.
+    license_status: USABLE_WITH_CONDITIONS   # exclude from provenance-clean unrestricted releases
+  - name: qqp
+    role: (intended positives) — BLOCKED
+    license: Quora ToS (non-commercial; no redistribution grant)
+    license_status: LICENSE_UNRESOLVED       # EXCLUDED from M1
+  - name: paws-qqp
+    role: (intended positives) — BLOCKED
+    license: QQP-bound; Google itself does not redistribute the raw data
+    license_status: LICENSE_UNRESOLVED       # EXCLUDED from M1

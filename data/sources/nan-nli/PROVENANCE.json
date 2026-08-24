@@ -1,0 +1,16 @@
+{
+  "attribution": "NaN-NLI (Truong et al., AACL-IJCNLP 2022), CC-BY-SA-4.0. Eval probe only.",
+  "files": {
+    "nan.csv": "533cd0a169662834a5bcbb6c064472e52b549424f43164cd7eabc087bfd6e89c"
+  },
+  "format": "csv",
+  "homepage": "https://github.com/joey234/nan-nli",
+  "id": "nan-nli",
+  "license": "CC-BY-SA-4.0",
+  "license_status": "USABLE_WITH_CONDITIONS",
+  "license_url": "https://huggingface.co/datasets/joey234/nan-nli",
+  "name": "NaN-NLI (sub-clausal negation test suite)",
+  "retrieved": "2026-08-20",
+  "revision": "1f84029a53940b675b62ab2b60980d4cae26eb78",
+  "tier": "eval_probe"
+}

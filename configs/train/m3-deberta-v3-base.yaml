@@ -1,0 +1,85 @@
+# M3 — the single, frozen, pre-registered training recipe. IMMUTABLE once approved (brief §18).
+# Loaded + validated by src/polarity/train/config.py; result-affecting fields feed the experiment
+# fingerprint; the paid runner refuses to start if the live manifests differ from approved_sha256.
+#
+# Every consequential value is evidence-backed in docs/M3-TRAINING-RESEARCH.md (DeBERTaV3 Table 15,
+# the HF model card/config, Guo et al. 2017). NOTE the fp16 correction: DeBERTa's disentangled
+# attention overflows fp16, so precision is bf16 (GPU) / fp32 (CPU smoke) — never fp16.
+
+experiment_id: xp-003-deberta-primary-capped
+
+model:
+  hf_id: microsoft/deberta-v3-base
+  revision: 8ccc9b6f36199bec6961081d44eb72fb3f7353f3   # pinned main SHA (HF API, 2026-08-21)
+  tokenizer_revision: 8ccc9b6f36199bec6961081d44eb72fb3f7353f3
+  license: MIT
+  params: "184M (86M backbone + 98M embedding; 12L/768H; vocab 128100)"
+  num_labels: 2
+  trust_remote_code: false                              # model_type deberta-v2 is a native class
+
+data:
+  recipe: primary-capped-A                              # committed capped manifests; a rebuild = new version
+  train_manifest: manifests/primary/train.jsonl
+  validation_manifest: manifests/primary/validation.jsonl
+  internal_test_manifest: manifests/primary/internal_test.jsonl
+  approved_sha256:
+    train: 656625d6ae3f445c77bfbfdf6b72e887c4785ab674d5ecce7dea4f769959bd95
+    validation: 6b31c1028af3b9e9b0113ac02468f4e040366addde828802ae93b344d47118c5
+    internal_test: 2f674ccb2f49516bd467d14d9f2ca90a24a8737d7c55fa6a867458db6d6bba88
+  allowed_sources: [cannot, paws-wiki]
+
+training:
+  objective: binary_cross_entropy
+  max_length: 128                                       # confirmed against the p99 joint-token study
+  truncation: longest_first                             # symmetric pair task
+  batch_size: 16
+  gradient_accumulation: 2                              # effective batch 32 (DeBERTaV3 Table 15)
+  learning_rate: 2.0e-5                                 # Table 15 grid center + model card
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_eps: 1.0e-6                                       # Table 15 (NOT torch's 1e-8 default)
+  weight_decay: 0.01
+  warmup_ratio: 0.06                                    # ~95 steps ~ Table 15 grid {50,100}
+  scheduler: linear
+  epochs: 4
+  max_steps: null
+  grad_clip: 1.0
+  precision: bf16                                       # GPU; fp32 on CPU smoke; fp16 disallowed
+  seed: 42
+  eval_every_steps: 100
+  early_stopping_patience: 3
+  class_weights: false                                  # 0.46 positive rate ~ balanced
+
+selection:
+  metric: recall_at_fpr
+  fpr_budget: 0.01
+  tie_break: earliest_step
+  pauc_fpr_max: 0.02                                    # stability cross-check on the FP-recall curve
+  split: validation
+
+calibration:
+  candidates: [identity, temperature, platt, isotonic]
+  fit_split: validation
+  isotonic_min_obs: 200
+
+success:
+  rule: paired_uncertainty
+  nli_baseline_recall: 0.073  # validation-selected tau; test FP=16/883 (1.81%)
+  nli_baseline_recall_ci: [0.055, 0.094]
+  nli_baseline_eqn_recall: 0.052
+  nli_baseline_eqn_n: 58
+  secondary_eqn_margin: 0.05
+  guardrail_expl_fp_margin: 0.05
+  bootstrap_n: 2000
+  bootstrap_seed: 12345
+
+cost:
+  max_runtime_hours: 1.0
+  max_estimated_cost_aud: 15.0
+  planning_hourly_rate_aud: 1.05                        # RunPod Secure 4090 ~US$0.74 x 1.41 AUD
+
+env:
+  python: ">=3.12"
+  transformers: ">=4.40"
+  torch: ">=2"
+  hardware_class: "single 24GB GPU (RTX 4090 / L4)"

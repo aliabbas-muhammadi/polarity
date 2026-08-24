@@ -1,0 +1,30 @@
+{
+  "bge-small": {
+    "device": "cpu",
+    "hf_id": "BAAI/bge-small-en-v1.5",
+    "key": "bge-small",
+    "license": "MIT",
+    "normalize": true,
+    "notes": "no instruction prefix for symmetric similarity",
+    "params": "~33M / 384-dim",
+    "pooling": "cls",
+    "prefix": "",
+    "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "role": "embedding",
+    "trust_remote_code": false
+  },
+  "nli-deberta-v3-base": {
+    "device": "cpu",
+    "hf_id": "cross-encoder/nli-deberta-v3-base",
+    "key": "nli-deberta-v3-base",
+    "license": "Apache-2.0",
+    "normalize": false,
+    "notes": "trained SNLI+MNLI (no ANLI); entailment index via config.label2id",
+    "params": "184M (DebertaV2)",
+    "pooling": "",
+    "prefix": "",
+    "revision": "6c749ce3425cd33b46d187e45b92bbf96ee12ec7",
+    "role": "nli_cross_encoder",
+    "trust_remote_code": false
+  }
+}

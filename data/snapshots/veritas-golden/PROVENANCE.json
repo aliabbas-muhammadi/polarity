@@ -1,0 +1,14 @@
+{
+  "changes": "verbatim copy; pair text + labels only (id, group, base, probe, pairType, equivalent, note); NO embeddings, NO guard verdicts imported",
+  "license": "author-owned internal evaluation set (see NOTICE)",
+  "license_status": "USABLE",
+  "name": "veritas-golden",
+  "notes": "SEALED FINAL HOLDOUT (governance G1/G2, docs/METHODOLOGY.md): never used for training, threshold selection, calibration, augmentation, or model/checkpoint selection; reserved for one final transfer evaluation at M6. veritas HEAD at capture: bd36420b18ccaa58a535866a0ff20da56c83fac7.",
+  "retrieved": "2026-08-20",
+  "revision": "164dc8e734b52732578c4aa44a872e674900ae1d",
+  "role": "final_holdout",
+  "rows": 75,
+  "sealed": true,
+  "sha256": "63b23deafc06a9acee264e88dc97656d8f1430829ec825013b9e86be3f90e578",
+  "source": "veritas (sibling repo, same author) :: eval/golden.json"
+}

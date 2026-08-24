@@ -1,0 +1,96 @@
+{
+  "artifact_bundle_fingerprint": "pl1:0dfcb787d1b5ea811b7405606f8a1e1ae95d50802053c0227324d16cb3c33df1",
+  "calibrator_method": "isotonic",
+  "calibrator_params": {
+    "breakpoints": 17,
+    "iso_x": [
+      3e-05,
+      4.6e-05,
+      0.000163,
+      0.000224,
+      0.000282,
+      0.000719,
+      0.001858,
+      0.003681,
+      0.008386,
+      0.30081,
+      0.93548,
+      0.993966,
+      0.996296,
+      0.998225,
+      0.998624,
+      0.998985,
+      0.999699
+    ],
+    "iso_y": [
+      0.0,
+      0.00255754,
+      0.02325581,
+      0.06666667,
+      0.12727273,
+      0.16,
+      0.26666667,
+      0.3,
+      0.35483871,
+      0.5,
+      0.66666667,
+      0.86666667,
+      0.91176471,
+      0.96296296,
+      0.98181818,
+      0.992,
+      1.0
+    ]
+  },
+  "checkpoint_sha256": "8d765a7e55c94bb5a8c7754eb705ddf8dc7e6c74cc72e1b0ce4c9110e7a0f355",
+  "execution_fingerprint": "pl1:bc55b62acce7235c6442b53e2b3cf1147241619cac801899d7993db7ee289cec",
+  "experiment_id": "xp-006-deberta-transformers-fixed",
+  "model_fingerprint": "pl1:04857dd3f1522863cc9e99378569403ab76f72f5f64d7fc59abc98e38a125c17",
+  "operating_points": {
+    "fpr_le_0.01": {
+      "observed_selection": {
+        "fn": 74,
+        "fp": 8,
+        "fpr": 0.00927,
+        "recall": 0.90525,
+        "tn": 855,
+        "tp": 707
+      },
+      "selection_rule": "fpr_budget",
+      "selection_split": "validation",
+      "target_fpr": 0.01,
+      "threshold": 0.994833
+    },
+    "fpr_le_0.05": {
+      "observed_selection": {
+        "fn": 29,
+        "fp": 43,
+        "fpr": 0.049826,
+        "recall": 0.962868,
+        "tn": 820,
+        "tp": 752
+      },
+      "selection_rule": "fpr_budget",
+      "selection_split": "validation",
+      "target_fpr": 0.05,
+      "threshold": 0.035936
+    },
+    "zero_fp": {
+      "observed_selection": {
+        "fn": 440,
+        "fp": 0,
+        "fpr": 0.0,
+        "recall": 0.43662,
+        "tn": 863,
+        "tp": 341
+      },
+      "selection_rule": "zero_observed_fp",
+      "selection_split": "validation",
+      "target_fpr": null,
+      "threshold": 0.9996990000000001
+    }
+  },
+  "protocol_version": 2,
+  "recipe_fingerprint": "pl1:04857dd3f1522863cc9e99378569403ab76f72f5f64d7fc59abc98e38a125c17",
+  "validation_n": 1644
+}

@@ -1,0 +1,18 @@
+{
+  "attribution": "PAWS-Wiki (Zhang, Baldridge, He, NAACL 2019), Google Research; sentences derived from Wikipedia (CC-BY-SA-3.0). Attribution + share-alike apply.",
+  "files": {
+    "test.jsonl": "2f39126ce1474868b76656e55d6e39a8216f9017df0cd775591433b05847980d",
+    "train.jsonl": "a483ebdbbff87ca57876bbe5e3d58a5bf70cd78ab14c787bb96e935daa0578a6",
+    "validation.jsonl": "fb9e878b8a4dd7e6cd36cb835574e54a285f936511eccc7dca8559000b01a889"
+  },
+  "format": "jsonl",
+  "homepage": "https://github.com/google-research-datasets/paws",
+  "id": "paws-wiki",
+  "license": "Google permissive notice; underlying Wikipedia text CC-BY-SA-3.0",
+  "license_status": "USABLE_WITH_CONDITIONS",
+  "license_url": "https://github.com/google-research-datasets/paws/blob/master/LICENSE",
+  "name": "PAWS-Wiki (labeled_final)",
+  "retrieved": "2026-08-20",
+  "revision": "161ece9501cf0a11f3e48bd356eaa82de46d6a09",
+  "tier": "primary"
+}

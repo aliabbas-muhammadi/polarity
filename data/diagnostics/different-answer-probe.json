@@ -1,0 +1,52 @@
+[
+  {"id": "ent-01", "group": "entity", "base": "What is the capital of France?", "probe": "What is the capital of Italy?", "pairType": "entity-swap", "equivalent": false, "note": "swapped country"},
+  {"id": "ent-02", "group": "entity", "base": "Who wrote Hamlet?", "probe": "Who wrote Macbeth?", "pairType": "entity-swap", "equivalent": false, "note": "swapped work"},
+  {"id": "ent-03", "group": "entity", "base": "What is the boiling point of water?", "probe": "What is the boiling point of ethanol?", "pairType": "entity-swap", "equivalent": false, "note": "swapped substance"},
+  {"id": "ent-04", "group": "entity", "base": "What language is spoken in Brazil?", "probe": "What language is spoken in Portugal?", "pairType": "entity-swap", "equivalent": false, "note": "swapped country, related answer"},
+  {"id": "ent-05", "group": "entity", "base": "What is the currency of Japan?", "probe": "What is the currency of China?", "pairType": "entity-swap", "equivalent": false, "note": "swapped country"},
+  {"id": "ent-06", "group": "entity", "base": "Who is the CEO of Tesla?", "probe": "Who is the CEO of Ford?", "pairType": "entity-swap", "equivalent": false, "note": "swapped company"},
+
+  {"id": "num-01", "group": "numeric", "base": "How many days are in a leap year?", "probe": "How many days are in a common year?", "pairType": "numeric-change", "equivalent": false, "note": "366 vs 365"},
+  {"id": "num-02", "group": "numeric", "base": "What is 15 percent of 200?", "probe": "What is 25 percent of 200?", "pairType": "numeric-change", "equivalent": false, "note": "changed percentage"},
+  {"id": "num-03", "group": "numeric", "base": "How many players are on a soccer team?", "probe": "How many players are on a basketball team?", "pairType": "numeric-change", "equivalent": false, "note": "11 vs 5, sport swap"},
+  {"id": "num-04", "group": "numeric", "base": "What is the square root of 144?", "probe": "What is the square root of 169?", "pairType": "numeric-change", "equivalent": false, "note": "12 vs 13"},
+  {"id": "num-05", "group": "numeric", "base": "How many ounces are in a pound?", "probe": "How many ounces are in a kilogram?", "pairType": "numeric-change", "equivalent": false, "note": "unit swap"},
+  {"id": "num-06", "group": "numeric", "base": "What year did World War II end?", "probe": "What year did World War I end?", "pairType": "numeric-change", "equivalent": false, "note": "1945 vs 1918"},
+
+  {"id": "op-01", "group": "operation", "base": "How do I add a user to the group?", "probe": "How do I remove a user from the group?", "pairType": "operation-flip", "equivalent": false, "note": "add vs remove"},
+  {"id": "op-02", "group": "operation", "base": "How do I enable two-factor authentication?", "probe": "How do I disable two-factor authentication?", "pairType": "operation-flip", "equivalent": false, "note": "enable vs disable"},
+  {"id": "op-03", "group": "operation", "base": "How do I export my data to CSV?", "probe": "How do I import my data from CSV?", "pairType": "operation-flip", "equivalent": false, "note": "export vs import"},
+  {"id": "op-04", "group": "operation", "base": "How do I increase the font size?", "probe": "How do I decrease the font size?", "pairType": "operation-flip", "equivalent": false, "note": "increase vs decrease"},
+  {"id": "op-05", "group": "operation", "base": "How do I deposit money into my account?", "probe": "How do I withdraw money from my account?", "pairType": "operation-flip", "equivalent": false, "note": "deposit vs withdraw"},
+  {"id": "op-06", "group": "operation", "base": "How do I subscribe to the newsletter?", "probe": "How do I unsubscribe from the newsletter?", "pairType": "operation-flip", "equivalent": false, "note": "subscribe vs unsubscribe"},
+
+  {"id": "meas-01", "group": "measurement", "base": "What is the area of a 3 by 4 rectangle?", "probe": "What is the perimeter of a 3 by 4 rectangle?", "pairType": "measurement-change", "equivalent": false, "note": "area vs perimeter"},
+  {"id": "meas-02", "group": "measurement", "base": "What is the radius of the circle?", "probe": "What is the diameter of the circle?", "pairType": "measurement-change", "equivalent": false, "note": "radius vs diameter"},
+  {"id": "meas-03", "group": "measurement", "base": "What is the mean of the dataset?", "probe": "What is the median of the dataset?", "pairType": "measurement-change", "equivalent": false, "note": "mean vs median"},
+  {"id": "meas-04", "group": "measurement", "base": "What is the volume of the cylinder?", "probe": "What is the surface area of the cylinder?", "pairType": "measurement-change", "equivalent": false, "note": "volume vs surface area"},
+  {"id": "meas-05", "group": "measurement", "base": "What is the length of the hypotenuse?", "probe": "What is the length of the shorter leg?", "pairType": "measurement-change", "equivalent": false, "note": "different side"},
+  {"id": "meas-06", "group": "measurement", "base": "What is the weight of the object?", "probe": "What is the density of the object?", "pairType": "measurement-change", "equivalent": false, "note": "weight vs density"},
+
+  {"id": "temp-01", "group": "temporal", "base": "What was the weather like yesterday?", "probe": "What will the weather be like tomorrow?", "pairType": "temporal-change", "equivalent": false, "note": "past vs future"},
+  {"id": "temp-02", "group": "temporal", "base": "Who was the president in 2008?", "probe": "Who was the president in 2020?", "pairType": "temporal-change", "equivalent": false, "note": "different year"},
+  {"id": "temp-03", "group": "temporal", "base": "What time does the store open?", "probe": "What time does the store close?", "pairType": "temporal-change", "equivalent": false, "note": "open vs close"},
+  {"id": "temp-04", "group": "temporal", "base": "When is the meeting scheduled to start?", "probe": "When is the meeting scheduled to end?", "pairType": "temporal-change", "equivalent": false, "note": "start vs end"},
+  {"id": "temp-05", "group": "temporal", "base": "What is the release date of the movie?", "probe": "What is the filming date of the movie?", "pairType": "temporal-change", "equivalent": false, "note": "release vs filming"},
+  {"id": "temp-06", "group": "temporal", "base": "How old is the building now?", "probe": "How old was the building in 1990?", "pairType": "temporal-change", "equivalent": false, "note": "now vs then"},
+
+  {"id": "comp-01", "group": "comparative", "base": "Which is larger, the sun or the moon?", "probe": "Which is smaller, the sun or the moon?", "pairType": "comparative-flip", "equivalent": false, "note": "larger vs smaller"},
+  {"id": "comp-02", "group": "comparative", "base": "Which country has the highest population?", "probe": "Which country has the lowest population?", "pairType": "comparative-flip", "equivalent": false, "note": "highest vs lowest"},
+  {"id": "comp-03", "group": "comparative", "base": "What is the cheapest flight to London?", "probe": "What is the most expensive flight to London?", "pairType": "comparative-flip", "equivalent": false, "note": "cheapest vs most expensive"},
+  {"id": "comp-04", "group": "comparative", "base": "Who is the tallest player on the team?", "probe": "Who is the shortest player on the team?", "pairType": "comparative-flip", "equivalent": false, "note": "tallest vs shortest"},
+  {"id": "comp-05", "group": "comparative", "base": "Which route is the fastest?", "probe": "Which route is the slowest?", "pairType": "comparative-flip", "equivalent": false, "note": "fastest vs slowest"},
+  {"id": "comp-06", "group": "comparative", "base": "What is the maximum temperature today?", "probe": "What is the minimum temperature today?", "pairType": "comparative-flip", "equivalent": false, "note": "max vs min"},
+
+  {"id": "para-01", "group": "control-para", "base": "What is the capital of France?", "probe": "What's France's capital city?", "pairType": "paraphrase-should-hit", "equivalent": true, "note": "genuine paraphrase"},
+  {"id": "para-02", "group": "control-para", "base": "How do I reset my password?", "probe": "What are the steps to reset my password?", "pairType": "paraphrase-should-hit", "equivalent": true, "note": "genuine paraphrase"},
+  {"id": "para-03", "group": "control-para", "base": "How many days are in a leap year?", "probe": "In a leap year, how many days are there?", "pairType": "paraphrase-should-hit", "equivalent": true, "note": "reordered paraphrase"},
+  {"id": "para-04", "group": "control-para", "base": "Who wrote Hamlet?", "probe": "Which author wrote the play Hamlet?", "pairType": "paraphrase-should-hit", "equivalent": true, "note": "genuine paraphrase"},
+  {"id": "para-05", "group": "control-para", "base": "How do I add a user to the group?", "probe": "What is the way to add a user to the group?", "pairType": "paraphrase-should-hit", "equivalent": true, "note": "same operation, paraphrased"},
+  {"id": "para-06", "group": "control-para", "base": "What is the area of a 3 by 4 rectangle?", "probe": "For a rectangle that is 3 by 4, what is its area?", "pairType": "paraphrase-should-hit", "equivalent": true, "note": "same measurement, paraphrased"},
+  {"id": "para-07", "group": "control-para", "base": "Which is larger, the sun or the moon?", "probe": "Between the sun and the moon, which one is bigger?", "pairType": "paraphrase-should-hit", "equivalent": true, "note": "larger = bigger, paraphrase"},
+  {"id": "para-08", "group": "control-para", "base": "What time does the store open?", "probe": "At what time does the store open?", "pairType": "paraphrase-should-hit", "equivalent": true, "note": "genuine paraphrase"}
+]

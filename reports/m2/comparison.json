@@ -1,0 +1,61 @@
+{
+  "mcnemar_nli_vs_embedding_at_operating": {
+    "a_correct_b_wrong": 63,
+    "b_correct_a_wrong": 46,
+    "mcnemar_statistic_cc": 2.348624,
+    "note": "continuity-corrected McNemar; stat > 3.84 ~ p < 0.05 (chi-square, 1 df)"
+  },
+  "operating_point": "threshold selected on validation to target FPR<=1%",
+  "per_baseline": {
+    "adaptive": {
+      "equivalent_negation_recall_at_operating": 0.0,
+      "internal_test_fp_at_validation_selected_target_fpr_le_1pct_threshold": 5,
+      "internal_test_fp_at_validation_zero_observed_fp_threshold": 0,
+      "precision_at_validation_selected_target_fpr_le_1pct_threshold": 0.6875,
+      "realized_internal_test_fpr_at_validation_selected_target_fpr_le_1pct_threshold": 0.005663,
+      "realized_internal_test_fpr_at_validation_zero_observed_fp_threshold": 0.0,
+      "recall_at_validation_selected_target_fpr_le_1pct_threshold": 0.015172,
+      "recall_at_validation_zero_observed_fp_threshold": 0.002759
+    },
+    "embedding-cosine": {
+      "equivalent_negation_recall_at_operating": 0.0,
+      "internal_test_fp_at_validation_selected_target_fpr_le_1pct_threshold": 11,
+      "internal_test_fp_at_validation_zero_observed_fp_threshold": 0,
+      "precision_at_validation_selected_target_fpr_le_1pct_threshold": 0.738095,
+      "realized_internal_test_fpr_at_validation_selected_target_fpr_le_1pct_threshold": 0.012458,
+      "realized_internal_test_fpr_at_validation_zero_observed_fp_threshold": 0.0,
+      "recall_at_validation_selected_target_fpr_le_1pct_threshold": 0.042759,
+      "recall_at_validation_zero_observed_fp_threshold": 0.0
+    },
+    "exact": {
+      "equivalent_negation_recall_at_operating": 0.0,
+      "internal_test_fp_at_validation_selected_target_fpr_le_1pct_threshold": 2,
+      "internal_test_fp_at_validation_zero_observed_fp_threshold": 0,
+      "precision_at_validation_selected_target_fpr_le_1pct_threshold": 0.333333,
+      "realized_internal_test_fpr_at_validation_selected_target_fpr_le_1pct_threshold": 0.002265,
+      "realized_internal_test_fpr_at_validation_zero_observed_fp_threshold": 0.0,
+      "recall_at_validation_selected_target_fpr_le_1pct_threshold": 0.001379,
+      "recall_at_validation_zero_observed_fp_threshold": 0.0
+    },
+    "nli-cross-encoder": {
+      "equivalent_negation_recall_at_operating": 0.051724,
+      "internal_test_fp_at_validation_selected_target_fpr_le_1pct_threshold": 16,
+      "internal_test_fp_at_validation_zero_observed_fp_threshold": 2,
+      "precision_at_validation_selected_target_fpr_le_1pct_threshold": 0.768116,
+      "realized_internal_test_fpr_at_validation_selected_target_fpr_le_1pct_threshold": 0.01812,
+      "realized_internal_test_fpr_at_validation_zero_observed_fp_threshold": 0.002265,
+      "recall_at_validation_selected_target_fpr_le_1pct_threshold": 0.073103,
+      "recall_at_validation_zero_observed_fp_threshold": 0.01931
+    },
+    "normalized": {
+      "equivalent_negation_recall_at_operating": 0.0,
+      "internal_test_fp_at_validation_selected_target_fpr_le_1pct_threshold": 2,
+      "internal_test_fp_at_validation_zero_observed_fp_threshold": 0,
+      "precision_at_validation_selected_target_fpr_le_1pct_threshold": 0.714286,
+      "realized_internal_test_fpr_at_validation_selected_target_fpr_le_1pct_threshold": 0.002265,
+      "realized_internal_test_fpr_at_validation_zero_observed_fp_threshold": 0.0,
+      "recall_at_validation_selected_target_fpr_le_1pct_threshold": 0.006897,
+      "recall_at_validation_zero_observed_fp_threshold": 0.0
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "attribution": "CANNOT dataset (Ansch\u00fctz, Lozano, Groh, 2023), CC-BY-SA-4.0. Attribution + share-alike apply.",
+  "files": {
+    "cannot_dataset_v1.1.tsv": "e3d1c77ed05d4fc2174b7d6d784c5d0b80ec1412d6a18cb721a96a63380d533f"
+  },
+  "format": "tsv",
+  "homepage": "https://github.com/dmlls/cannot-dataset",
+  "id": "cannot",
+  "license": "CC-BY-SA-4.0",
+  "license_status": "USABLE_WITH_CONDITIONS",
+  "license_url": "https://github.com/dmlls/cannot-dataset#readme",
+  "name": "CANNOT (v1.1)",
+  "retrieved": "2026-08-20",
+  "revision": "3b94fb51fcf8e642ea28cdc065805d1d3da3247f",
+  "tier": "primary"
+}

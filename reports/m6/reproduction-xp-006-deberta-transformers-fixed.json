@@ -1,0 +1,18 @@
+{
+  "evidence_scope": "score agreement only; does not establish checkpoint identity or retraining reproducibility",
+  "experiment_id": "xp-006-deberta-transformers-fixed",
+  "frozen_validation_selected_threshold": 0.994833,
+  "max_abs_score_diff": 0.0,
+  "mean_abs_score_diff": 0.0,
+  "n": 1608,
+  "operating_point": "fpr_le_0.01",
+  "protocol_version": 2,
+  "recall_delta_at_frozen_validation_selected_threshold": 0.0,
+  "recall_tol": 0.03,
+  "score_agreement_rule": "aligned per-row absolute score difference < 1e-6",
+  "score_agreement_tolerance": 1e-06,
+  "score_tol": 0.02,
+  "selection_split": "validation",
+  "target_fpr": 0.01,
+  "verdict": "SCORE_AGREEMENT_WITHIN_TOLERANCE"
+}

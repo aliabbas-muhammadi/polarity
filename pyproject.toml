@@ -1,0 +1,105 @@
+[project]
+name = "polarity"
+version = "0.1.0"
+description = "A cache-equivalence cross-encoder: telling paraphrases from meaning-changing negation better than an embedding threshold."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Ali Muhammadi" }]
+dependencies = [
+    "pydantic>=2",
+    "typer>=0.12",
+    "pyyaml>=6", # load the immutable train config for the torch-free fingerprint / refuse-to-start gate
+]
+
+[project.scripts]
+polarity = "polarity.cli:app"
+
+[project.optional-dependencies]
+# Local, author-run baseline inference only (M2). NOT installed by default or in CI, which never
+# runs model inference (it reproduces metrics from committed predictions). Install with:
+#   uv sync --extra models
+models = [
+    "sentence-transformers>=3",
+    "transformers>=4.40",
+    "torch>=2",
+]
+# Local, author-run M3 training only. NOT installed by default or in CI (which never trains or runs
+# inference — it reproduces reports from committed predictions). Install with: uv sync --extra train
+#   sentencepiece + protobuf: DeBERTa-v3's SentencePiece tokenizer (no tokenizer.json on the repo).
+# xp-006 release profile pins the exact successful Transformers version and Torch minor. This is
+# intentionally narrower than the unrelated M2 `models` extra above. A Transformers-version-
+# sensitive DeBERTaV2 fine-tuning failure was observed and diagnosed in M5 (docs/M5-REPORT.md):
+# author-run controls learned under 4.x but not 5.15.1, and M3/M3.1/M3.2 (all Transformers 5.x)
+# could not separate the classes. The specific upstream defect is unproven; xp-006 used 4.57.6.
+train = [
+    "torch>=2.6,<2.7",
+    "transformers==4.57.6",
+    "accelerate>=0.30",
+    "sentencepiece>=0.2",
+    "protobuf>=4",
+]
+
+[tool.uv]
+# `models` (sentence-transformers>=5 → transformers>=5) and `train` (transformers<5, see above)
+# require different transformers majors, so they are mutually exclusive: never resolve them into
+# one environment. Both are author-run only and never used together (M2 inference vs M3 training).
+conflicts = [[{ extra = "train" }, { extra = "models" }]]
+
+[dependency-groups]
+dev = [
+    "ruff",
+    "mypy",
+    "pytest",
+    "pytest-cov",
+    "scikit-learn", # test-only: independent cross-check for precision/recall/calibration
+    "pyarrow",      # fetch-only: read the PAWS-Wiki parquet (HF mirror) at a pinned revision
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/polarity"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+# Omit flake8-type-checking (TC): it moves imports under TYPE_CHECKING, which breaks
+# Pydantic v2's runtime annotation evaluation. (Same rationale as the judgelab repo.)
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+
+[[tool.mypy.overrides]]
+module = ["tests.*"]
+disallow_untyped_defs = false
+
+[[tool.mypy.overrides]]
+module = ["pyarrow.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = [
+    "sentence_transformers.*",
+    "transformers.*",
+    "torch.*",
+    "sklearn.*",
+    "scipy.*",
+    "accelerate.*",
+    "sentencepiece.*",
+    "yaml.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

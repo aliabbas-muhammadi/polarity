@@ -1,0 +1,34 @@
+{
+  "confound_delta": 0.152874,
+  "mnli_verdict": "EXCLUDE",
+  "mnli_verdict_reason": "raises source->label confound (majority-acc 0.694575, delta 0.152874) beyond the 0.8/0.1 bar; MNLI is negatives-only",
+  "new_categories_from_mnli": [],
+  "primary_category_counts": {
+    "equivalent_negation": 705,
+    "exact_repeat": 41,
+    "explicit_negation": 1205,
+    "hard_paraphrase": 352,
+    "lexical_contradiction": 149,
+    "numeric_change": 44,
+    "paraphrase": 6239,
+    "quantifier_change": 198,
+    "scope_change": 13,
+    "unknown": 7037
+  },
+  "primary_equivalent_negation": 705,
+  "primary_source_majority_accuracy": 0.541701,
+  "with_mnli_category_counts": {
+    "equivalent_negation": 705,
+    "exact_repeat": 41,
+    "explicit_negation": 4929,
+    "hard_paraphrase": 352,
+    "lexical_contradiction": 199,
+    "numeric_change": 251,
+    "paraphrase": 6239,
+    "quantifier_change": 952,
+    "scope_change": 35,
+    "unknown": 10280
+  },
+  "with_mnli_equivalent_negation": 705,
+  "with_mnli_source_majority_accuracy": 0.694575
+}

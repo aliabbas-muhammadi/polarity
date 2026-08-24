@@ -1,0 +1,20 @@
+{
+  "conditions": {
+    "batch_pairs": 100,
+    "note": "local inference benchmark only; API comparison deferred (no comparable historical Haiku latency)",
+    "timed_runs": 5,
+    "warmup_runs": 1
+  },
+  "device": "cpu",
+  "embedding_bge_small": {
+    "p50_ms_per_pair": 0.941,
+    "p95_ms_per_pair": 0.945,
+    "throughput_pairs_per_s": 1062.6
+  },
+  "nli_cross_encoder": {
+    "p50_ms_per_pair": 10.236,
+    "p95_ms_per_pair": 10.337,
+    "throughput_pairs_per_s": 97.7
+  },
+  "platform": "Darwin arm64"
+}

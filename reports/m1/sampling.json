@@ -1,0 +1,26 @@
+{
+  "cannot": {
+    "available": 77376,
+    "cap": 8000,
+    "dropped": 69376,
+    "kept": 8000
+  },
+  "mnli": {
+    "available": 137356,
+    "cap": 8000,
+    "dropped": 129356,
+    "kept": 8000
+  },
+  "nan-nli": {
+    "available": 258,
+    "cap": null,
+    "dropped": 0,
+    "kept": 258
+  },
+  "paws-wiki": {
+    "available": 65401,
+    "cap": 8000,
+    "dropped": 57401,
+    "kept": 8000
+  }
+}

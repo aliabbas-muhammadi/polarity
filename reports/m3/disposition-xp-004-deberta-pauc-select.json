@@ -1,0 +1,8 @@
+{
+  "guardrail_ok": true,
+  "note": "signals only; the final disposition (incl. DATA_OR_OBJECTIVE_PROBLEM, a manual call) is stated with rationale in docs/M3-REPORT.md",
+  "primary_material": false,
+  "rule": "paired_uncertainty",
+  "secondary_material": false,
+  "suggested_disposition": "REGRESSION"
+}
